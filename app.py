@@ -26,7 +26,6 @@ api.add_resource(ItemList, '/items')
 api.add_resource(StoreList, '/stores')
 api.add_resource(UserRegister, '/register')
 
-
+database.init_app(app)
 if __name__ == '__main__':
-    database.init_app(app)
     app.run(port=5000, debug=True)
